@@ -1,0 +1,158 @@
+nohup: ignoring input
+⚠️ 发现 11 个有问题的特征列需要移除。
+  - 2 个列含有 NaN 值: ['Mayer_Bo', 'Atom_connec']
+  - 9 个列是常数: ['IP_shift', 'EA_shift', 'h_shell_f', 'l_shell_f', 'Pop_type_f_Au_1', 'Pop_type_f_Au_2', 'Pop_type_d_C', 'Pop_type_f_C', 'Pop_type_f_I']
+数据清洗后特征：(138, 10)
+
+训练线性模型...✨
+
+--- Evaluating final 'Linear' model ---
+✅ Final evaluation plot for Linear saved to 10_feature_results_ddG_kcal_mol/Linear_final_evaluation.png
+
+--- Final Performance Report for Linear ---
+  Development Set (Train):
+    - R² Score: 0.7717
+    - MAE:      1.1011
+  Hold-out Test Set:
+    - R² Score: 0.5133
+    - MAE:      1.5585
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7355
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6453
+    -LOO MAE:      1.3409
+-------------------------------------------------
+
+--- Evaluating final 'Lasso' model ---
+✅ Final evaluation plot for Lasso saved to 10_feature_results_ddG_kcal_mol/Lasso_final_evaluation.png
+
+--- Final Performance Report for Lasso ---
+  Development Set (Train):
+    - R² Score: 0.7715
+    - MAE:      1.0986
+  Hold-out Test Set:
+    - R² Score: 0.5182
+    - MAE:      1.5551
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7321
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6682
+    -LOO MAE:      1.3132
+-------------------------------------------------
+
+--- Evaluating final 'Ridge' model ---
+✅ Final evaluation plot for Ridge saved to 10_feature_results_ddG_kcal_mol/Ridge_final_evaluation.png
+
+--- Final Performance Report for Ridge ---
+  Development Set (Train):
+    - R² Score: 0.7640
+    - MAE:      1.1134
+  Hold-out Test Set:
+    - R² Score: 0.5329
+    - MAE:      1.5710
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7112
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6685
+    -LOO MAE:      1.3192
+-------------------------------------------------
+
+--- Evaluating final 'ElasticNet' model ---
+✅ Final evaluation plot for ElasticNet saved to 10_feature_results_ddG_kcal_mol/ElasticNet_final_evaluation.png
+
+--- Final Performance Report for ElasticNet ---
+  Development Set (Train):
+    - R² Score: 0.7649
+    - MAE:      1.1113
+  Hold-out Test Set:
+    - R² Score: 0.5338
+    - MAE:      1.5632
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7141
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6641
+    -LOO MAE:      1.3280
+-------------------------------------------------
+
+训练决策树模型...
+决策树最优参数是: {'ccp_alpha': 0.001, 'max_depth': 10.0, 'max_features': 0.5, 'min_samples_leaf': 6.350920916995339, 'min_samples_split': 5.0} 
+
+--- Evaluating final 'Decision_Tree' model ---
+✅ Final evaluation plot for Decision_Tree saved to 10_feature_results_ddG_kcal_mol/Decision_Tree_final_evaluation.png
+
+--- Final Performance Report for Decision_Tree ---
+  Development Set (Train):
+    - R² Score: 0.8250
+    - MAE:      0.9240
+  Hold-out Test Set:
+    - R² Score: 0.3039
+    - MAE:      1.9917
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.5784
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.4110
+    -LOO MAE:      1.6293
+-------------------------------------------------
+
+训练支持向量机模型...
+支持向量机最优参数是: C=20.0, gamma=1.211139660720336, epsilon=0.05, kernel=rbf (原始参数值: 3.0)
+
+--- Evaluating final 'SVR' model ---
+✅ Final evaluation plot for SVR saved to 10_feature_results_ddG_kcal_mol/SVR_final_evaluation.png
+
+--- Final Performance Report for SVR ---
+  Development Set (Train):
+    - R² Score: 0.8781
+    - MAE:      0.5927
+  Hold-out Test Set:
+    - R² Score: 0.4090
+    - MAE:      1.7200
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7684
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6896
+    -LOO MAE:      1.1522
+-------------------------------------------------
+
+训练XGBoost模型...
+XGBoost最优参数是: {'colsample_bytree': 0.7073637901312952, 'eta': 0.3747568026443993, 'gamma': 0.915714295651292, 'max_depth': 9.425996049483183, 'min_child_weight': 6.9154975767432045, 'n_estimators': 52.66038321777556, 'reg_alpha': 4.1679235894895506, 'reg_lambda': 8.592607460517614, 'subsample': 0.872944190521713} 
+
+--- Evaluating final 'XGBoost' model ---
+✅ Final evaluation plot for XGBoost saved to 10_feature_results_ddG_kcal_mol/XGBoost_final_evaluation.png
+
+--- Final Performance Report for XGBoost ---
+  Development Set (Train):
+    - R² Score: 0.8984
+    - MAE:      0.6615
+  Hold-out Test Set:
+    - R² Score: 0.3981
+    - MAE:      1.7918
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7223
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6534
+    -LOO MAE:      1.2522
+-------------------------------------------------
+
+训练随机森林模型...
+随机森林最优参数是: {'max_depth': 24.074008986417883, 'max_features': 3.0, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1.0, 'min_samples_split': 2.0, 'n_estimators': 369.01483856743243} 
+
+--- Evaluating final 'Random_Forest' model ---
+✅ Final evaluation plot for Random_Forest saved to 10_feature_results_ddG_kcal_mol/Random_Forest_final_evaluation.png
+
+--- Final Performance Report for Random_Forest ---
+  Development Set (Train):
+    - R² Score: 0.9580
+    - MAE:      0.4334
+  Hold-out Test Set:
+    - R² Score: 0.4449
+    - MAE:      1.7400
+  5 Fold Cross-Validation:
+    -5 CV R² Score: 0.7156
+  Leave-One-Out Cross-Validation:
+    -LOO R² Score: 0.6584
+    -LOO MAE:      1.2190
+-------------------------------------------------
+
+总运行时间: 552.80秒 (~9.21分钟)
+
